@@ -8,24 +8,52 @@
     android:padding="20dp">
 
     <android.support.v7.widget.AppCompatEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nama"/>
-
-    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Email"/>
 
     <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Password"/>
 
     <Button
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Daftar"/>
 
+    <RelativeLayout
+        android:id="@+id/secondForm"
+        android:layout_below="@+id/formLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_toLeftOf="@+id/linkDaftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah Punya AKun ?  "/>
+
+        <TextView
+            android:id="@+id/linkDaftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Login"
+            android:onClick="gotoLogin"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"/>
 
 </LinearLayout>
